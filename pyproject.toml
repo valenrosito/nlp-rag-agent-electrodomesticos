@@ -1,0 +1,28 @@
+[project]
+name = "rag-electrodomesticos"
+version = "0.1.0"
+description = "Agente RAG para consultas sobre electrodomésticos"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain==1.1.0",
+    "langchain-core==1.1.0",
+    "langchain-google-genai==0.0.1",
+    "google-generativeai==0.3.2",
+    "chromadb==0.3.23",
+    "pandas==2.3.3",
+    "numpy==2.3.5",
+    "jupyter==1.1.1",
+    "ipykernel==7.1.0",
+    "python-dotenv==1.2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

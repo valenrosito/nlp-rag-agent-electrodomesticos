@@ -1,0 +1,69 @@
+# SCHEMA DE BASE DE DATOS DE PRODUCTOS
+
+## Información General
+- Dataset: Productos de Electrodomésticos
+- Total de registros: 300
+- Descripción: Base de datos de productos electrodomésticos con información de precios, stock, características técnicas y disponibilidad.
+
+## Columnas Disponibles
+id_producto, nombre, categoria, subcategoria, marca, precio_usd, stock, color, potencia_w, capacidad, voltaje, peso_kg, garantia_meses, descripcion
+
+## Variables Categóricas
+
+### categoria
+- Tipo: Categórica
+- Valores únicos: 4
+- Valores posibles: Audio y Video, Climatización, Cocina, Lavado
+
+### subcategoria
+- Tipo: Categórica
+- Valores únicos: 13
+- Valores posibles: Aires Acondicionados, Calefacción, Cocción, Lavado de Ropa, Lavado de Vajilla, Pequeños Electrodomésticos, Planchado, Preparación, Purificación, Refrigeración, Secado, Televisores, Ventilación
+
+### marca
+- Tipo: Categórica
+- Valores únicos: 17
+- Valores posibles: AirFlow, ChefMaster, CleanMaster, ClimaTech, CookElite, EcoClima, FreshWash, HomeChef, KitchenPro, LaundryTech, PureAir, ScreenPro, SparkleHome, TechHome, ThermoControl, VisionPro, WashPro
+
+### color
+- Tipo: Categórica
+- Valores únicos: 10
+- Valores posibles: Amarillo, Azul, Blanco, Dorado, Gris, Negro, Plateado, Rojo, Rosa, Verde
+
+### voltaje
+- Tipo: Categórica
+- Valores únicos: 3
+- Valores posibles: 110-220V, 12V, 220V
+
+### capacidad
+- Tipo: Categórica
+- Valores únicos: 20
+- Valores posibles: 1.0L, 1.2L, 1.5L, 1.8L, 10kg, 12kg, 2.0L, 2.5L, 200L, 3.0L, 300L, 350L, 400L, 450L, 500L, 550L, 5kg, 7kg, 8kg, 9kg
+
+## Variables Numéricas
+
+### precio_usd
+- Tipo: Numérica
+- Rango: [28.22, 2992.33]
+- Mediana: 1409.91
+
+### stock
+- Tipo: Numérica
+- Rango: [1.00, 200.00]
+- Mediana: 100.00
+
+### potencia_w
+- Tipo: Numérica
+- Rango: [40.00, 1950.00]
+- Mediana: 1050.00
+
+### peso_kg
+- Tipo: Numérica
+- Rango: [0.60, 49.40]
+- Mediana: 23.45
+
+### garantia_meses
+- Tipo: Numérica
+- Rango: [6.00, 36.00]
+- Mediana: 18.00
+

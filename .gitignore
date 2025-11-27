@@ -47,7 +47,6 @@ MANIFEST
 .DS_Store
 
 # Data files
-data/processed/
 *.db
 *.sqlite
 *.sqlite3

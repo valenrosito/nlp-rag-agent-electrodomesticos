@@ -4,26 +4,31 @@ Agente conversacional basado en RAG (Retrieval-Augmented Generation) para respon
 
 ## Descripción
 
-Este proyecto implementa un sistema de recuperación de información aumentada con generación (RAG) que permite realizar consultas en lenguaje natural sobre electrodomésticos. El sistema utiliza embeddings para buscar información relevante en una base de datos vectorial y genera respuestas coherentes utilizando modelos de Google AI (Gemini).
+Este proyecto implementa un sistema de recuperación de información mediante RAG que permite realizar consultas en lenguaje natural sobre electrodomésticos. 
+
+El proyecto contiene dos implementaciones:
+- **Problema 1 (`1.rag_flow.ipynb`)**: RAG con flujo simple utilizando búsqueda vectorial, tabular y de grafos con un enrutamiento
+- **Problema 2 (`2.rag_agent.ipynb`)**: RAG con flujo agéntico que combina tres bases de datos (vectorial, tabular y grafos) con enrutamiento inteligente mediante Agente ReAct
 
 ## Estructura del Proyecto
 
 ```
 nlp-rag-agent-electrodomesticos/
-├── TP_Final_NLP_RAG_Electrodomesticos.ipynb  # Notebook principal con toda la implementación
+├── 1.rag_flow.ipynb  # Notebook con la implementacion del Problema 1
+├── 2.rag_agent.ipynb  # Notebook con la implementacion del Problema 2
 ├── data/                                       # Directorio de datos
 │   ├── raw/                                   # Datos originales
 │   └── processed/                             # Datos procesados y embeddings
 ├── pyproject.toml                              # Configuración de dependencias
-├── .env                                        # Variables de entorno (API keys)
-├── .gitignore                                  # Archivos ignorados por git
-└── README.md                                   # Este archivo
+├── .env                                     
+├── .gitignore                                  
+└── README.md                                 
 ```
 
 ## Requisitos Previos
 
 - Python 3.10 o superior
-- [uv](https://github.com/astral-sh/uv) - Gestor de paquetes Python ultrarrápido
+- [uv](https://github.com/astral-sh/uv) - Gestor de paquetes Python
 - API Key de Google AI Studio (obtener en [Google AI Studio](https://makersuite.google.com/app/apikey))
 
 ## Instalación

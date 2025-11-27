@@ -27,7 +27,7 @@ nlp-rag-agent-electrodomesticos/
 
 ## Requisitos Previos
 
-- Python 3.10 o superior
+- Python version mayor o igual a 3.10 y menor o igual a 3.13.
 - [uv](https://github.com/astral-sh/uv) - Gestor de paquetes Python
 - API Key de Google AI Studio (obtener en [Google AI Studio](https://makersuite.google.com/app/apikey))
 

@@ -75,6 +75,27 @@ Usando el archivo `pyproject.toml`:
 uv pip install -e .
 ```
 
+Para instalar Memgraph, debes ejecutar en la terminal con Docker corriendo:
+
+```bash
+docker run -p 7687:7687 memgraph/memgraph
+```
+
+**Comandos útiles de Docker:**
+```bash
+# Ver logs
+docker logs memgraph
+
+# Detener Memgraph
+docker stop memgraph
+
+# Iniciar Memgraph nuevamente
+docker start memgraph
+
+# Eliminar contenedor
+docker rm memgraph
+```
+
 ### 6. Configurar Variables de Entorno
 
 Crear un archivo `.env` en la raíz del proyecto:

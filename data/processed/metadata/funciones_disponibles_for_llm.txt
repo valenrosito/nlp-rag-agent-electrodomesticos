@@ -113,6 +113,18 @@ SIEMPRE revisa bien si debes filtrar por **CATEGORIO O SUBCATEGORIA NE FUNCIONES
   "parametros": {}
 }
 
+### 9. buscar_por_id
+**Descripción**: Busca un producto específico por su ID.
+**Parámetros**:
+- id_producto (string): ID del producto a buscar
+**Ejemplo JSON**:
+{
+  "funcion": "buscar_por_id",
+  "parametros": {
+    "id_producto": "P0001"
+  }
+}
+
 ## INSTRUCCIONES IMPORTANTES:
 
 1. Analiza cuidadosamente la consulta del usuario

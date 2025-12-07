@@ -103,7 +103,7 @@ Crear un archivo `.env` en la raíz del proyecto:
 ```bash
 GOOGLE_API_KEY=tu_api_key_aqui
 ```
-> Recomendación: Si activas por primera vez, tienes 300 dolares gratis de la API paga por 90 dias, esto aumenta el limite de request por minuto y disminuye el tiempo entre request minimo requerido
+> Recomendación: Si activas por primera vez, te dan 300 dolares gratis de la API paga por 90 dias, esto aumenta el limite de request por minuto y disminuye el tiempo entre request minimo requerido
 
 ---
 

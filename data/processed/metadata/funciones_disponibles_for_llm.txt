@@ -7,19 +7,21 @@ SIEMPRE revisa bien si debes filtrar por **CATEGORIO O SUBCATEGORIA NE FUNCIONES
 ## Funciones Disponibles:
 
 ### 1. buscar_por_precio
-**Descripción**: Busca productos por rango de precio y opcionalmente por categoría.
+**Descripción**: Busca productos por rango de precio y opcionalmente por categoría, subcategoría y marca.
 **Parámetros**:
 - precio_min (float, opcional): Precio mínimo en USD
 - precio_max (float, opcional): Precio máximo en USD  
 - categoria (string, opcional): Categoría del producto (Ej: Climatización, Cocina, Lavado, Audio y Video)
 - subcategoria (string, opcional): subcategoria del producto (Ej: Refrigeración, Aires Acondicionados, Secado, Planchado, Calefacción, Cocción, Ventilación)
+- marca (string, opcional): Marca del producto (Ej: TechHome, KitchenPro, HomeChef, ChefMaster, CookElite, etc.)
 **Ejemplo JSON**:
 {
   "funcion": "buscar_por_precio",
   "parametros": {
     "precio_min": 100.0,
     "precio_max": 500.0,
-    "categoria": "Refrigeración"
+    "categoria": "Cocina",
+    "marca": "TechHome"
   }
 }
 
@@ -29,12 +31,14 @@ SIEMPRE revisa bien si debes filtrar por **CATEGORIO O SUBCATEGORIA NE FUNCIONES
 - stock_min (int, opcional, default=0): Stock mínimo requerido
 - categoria (string, opcional): Categoría del producto (Ej: Climatización, Cocina, Lavado, Audio y Video)
 - subcategoria (string, opcional): subcategoria del producto (Ej: Refrigeración, Aires Acondicionados, Secado, Planchado, Calefacción, Cocción, Ventilación)
+- marca (string, opcional): Marca del producto (Ej: TechHome, KitchenPro, HomeChef, ChefMaster, CookElite, etc.)
 **Ejemplo JSON**:
 {
   "funcion": "buscar_por_stock",
   "parametros": {
     "stock_min": 5,
-    "categoria": "Cocina"
+    "categoria": "Cocina",
+    "marca": "KitchenPro"
   }
 }
 
@@ -72,12 +76,14 @@ SIEMPRE revisa bien si debes filtrar por **CATEGORIO O SUBCATEGORIA NE FUNCIONES
 **Parámetros**:
 - n (int, opcional, default=10): Número de productos a retornar
 - categoria (string, opcional): Filtrar por categoría
+- marca (string, opcional): Filtrar por marca (Ej: TechHome, KitchenPro, HomeChef, etc.)
 **Ejemplo JSON**:
 {
   "funcion": "productos_mas_baratos",
   "parametros": {
     "n": 5,
-    "categoria": "Limpieza"
+    "categoria": "Cocina",
+    "marca": "HomeChef"
   }
 }
 
@@ -86,12 +92,14 @@ SIEMPRE revisa bien si debes filtrar por **CATEGORIO O SUBCATEGORIA NE FUNCIONES
 **Parámetros**:
 - n (int, opcional, default=10): Número de productos a retornar
 - categoria (string, opcional): Filtrar por categoría
+- marca (string, opcional): Filtrar por marca (Ej: TechHome, KitchenPro, ClimaTech, etc.)
 **Ejemplo JSON**:
 {
   "funcion": "productos_mas_caros",
   "parametros": {
     "n": 5,
-    "categoria": "Climatización"
+    "categoria": "Climatización",
+    "marca": "ClimaTech"
   }
 }
 

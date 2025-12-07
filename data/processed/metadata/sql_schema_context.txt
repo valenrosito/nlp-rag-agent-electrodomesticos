@@ -1,0 +1,85 @@
+# SCHEMA DE LA BASE DE DATOS SQL - VENTAS HISTÓRICAS
+
+## TABLA: ventas
+Contiene el historial completo de ventas de electrodomésticos.
+
+### COLUMNAS:
+- id_venta (TEXT): Identificador único de la venta (ej: "V00001")
+- fecha (TEXT): Fecha de la venta en formato YYYY-MM-DD (ej: "2024-01-15")
+- hora (TEXT): Hora de la venta en formato HH:MM:SS (ej: "14:30:45")
+- id_producto (TEXT): ID del producto vendido (ej: "P0001")
+- nombre_producto (TEXT): Nombre del producto
+- id_vendedor (TEXT): ID del vendedor (ej: "VEN001")
+- nombre_vendedor (TEXT): Nombre del vendedor
+- sucursal (TEXT): Sucursal donde se realizó la venta
+- cantidad (INTEGER): Cantidad de unidades vendidas
+- precio_unitario (REAL): Precio por unidad en USD
+- descuento_pct (INTEGER): Porcentaje de descuento aplicado (0-100)
+- total (REAL): Monto total de la venta en USD
+- metodo_pago (TEXT): Método de pago usado (ej: "Tarjeta de Crédito", "Efectivo", "Transferencia")
+- cliente_nombre (TEXT): Nombre del cliente
+- cliente_provincia (TEXT): Provincia del cliente
+
+### EJEMPLOS DE CONSULTAS SQL:
+
+**Ventas totales por método de pago:**
+```sql
+SELECT metodo_pago, COUNT(*) as cantidad_ventas, SUM(total) as total_ventas
+FROM ventas
+GROUP BY metodo_pago
+ORDER BY total_ventas DESC
+```
+
+**Top 10 productos más vendidos:**
+```sql
+SELECT nombre_producto, SUM(cantidad) as unidades_vendidas, SUM(total) as ingresos_totales
+FROM ventas
+GROUP BY nombre_producto
+ORDER BY unidades_vendidas DESC
+LIMIT 10
+```
+
+**Ventas por sucursal:**
+```sql
+SELECT sucursal, COUNT(*) as num_ventas, SUM(total) as total_ingresos
+FROM ventas
+GROUP BY sucursal
+ORDER BY total_ingresos DESC
+```
+
+**Ventas mensuales:**
+```sql
+SELECT strftime('%Y-%m', fecha) as mes, COUNT(*) as num_ventas, SUM(total) as total
+FROM ventas
+GROUP BY mes
+ORDER BY mes
+```
+
+**Top vendedores:**
+```sql
+SELECT nombre_vendedor, COUNT(*) as ventas_realizadas, SUM(total) as total_vendido
+FROM ventas
+GROUP BY nombre_vendedor
+ORDER BY total_vendido DESC
+LIMIT 10
+```
+
+**Distribución por provincia:**
+```sql
+SELECT cliente_provincia, COUNT(*) as num_clientes, SUM(total) as total_ventas
+FROM ventas
+GROUP BY cliente_provincia
+ORDER BY num_clientes DESC
+```
+
+### TIPOS DE GRÁFICOS DISPONIBLES:
+1. **barras**: Para comparaciones entre categorías (ventas por sucursal, productos, etc.)
+2. **torta/pie**: Para mostrar proporciones/distribuciones (métodos de pago, provincias)
+3. **lineas**: Para series temporales (ventas mensuales, tendencias)
+
+### NOTAS IMPORTANTES:
+- Usa agregaciones (SUM, COUNT, AVG) para análisis
+- Para fechas, usa strftime() para extraer año, mes, día
+- Limita resultados con LIMIT cuando sea apropiado
+- Ordena con ORDER BY para mejores visualizaciones
+"""
